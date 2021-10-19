@@ -1,0 +1,16 @@
+// Typedef позволяет программисту создать псевдоним для любого типа данных и использовать его вместо фактического имени типа.
+
+
+// typedef - type name
+typedef long miles_t;
+typedef long speed_t;
+
+miles_t distance = 8;
+speed_t phr = 2100;
+
+
+// Type alias (after C++11)
+
+
+// using - name = type
+using time_t = double;
