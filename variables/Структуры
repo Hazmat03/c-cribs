@@ -1,0 +1,17 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+    struct Male {
+        int age;
+        string Name;
+    };
+
+    Male John;
+    John.age = 12;
+    John.Name = "GG";
+
+    Male Dan{ 24, "BOB" };
+    cout << Dan.age;
+}
