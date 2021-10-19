@@ -12,3 +12,13 @@ int main() {
 	cout << i;
 	return 0;
 }
+
+int main() {
+	int a = 5;
+	cout << "Original value of a:\t " << a << endl;
+	int* px = &a;
+
+	*px = 17;
+	cout << "New value of a:\t " << a << endl;
+	return 0;
+}
