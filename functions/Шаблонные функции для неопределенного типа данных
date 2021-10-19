@@ -1,0 +1,10 @@
+template <typename T1, typename T2> 	// ШАБЛОННЫЕ ФУНКЦИИ, T1 - int, T2 - double
+void Sum(T1 a, T2 b) { 			// Т - неопределенный тип данных
+	cout << a << endl;
+	cout << b << endl;
+}
+
+int main() {
+	Sum(12.4, "LOL");
+	return 0;
+}
