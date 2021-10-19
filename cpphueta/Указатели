@@ -1,0 +1,14 @@
+// Pointers 
+
+void func(int* a) {
+	*a += 10;
+	cout << a << endl;
+	cout << *a << endl;
+}
+
+int main() {
+	int i = 2;
+	func(&i);
+	cout << i;
+	return 0;
+}
