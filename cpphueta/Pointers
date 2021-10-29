@@ -1,6 +1,7 @@
 // Pointers 
 // 		& to know what address is stored
 //		* to get value from pointed address
+//	Type of pointer must match the type of variable it is pointing
 
 void func(int* a) {
 	*a += 10;
