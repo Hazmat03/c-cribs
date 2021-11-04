@@ -1,2 +1,5 @@
-exit(0) = break the function // cstdlib
-std::cin.ignore(32767, '\n'); // delete 32767 symbols before \n (\n included)
+exit(0) = break the function      // cstdlib
+cin.ignore(32767, '\n');          // delete 32767 symbols before \n (\n included)
+while(cin.get() != '\n');         // will read until the end of the current input line.
+cin.fail()                        // tells if last input was incorrect
+cin.clear()                       // resets state to "good"
