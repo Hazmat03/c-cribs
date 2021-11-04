@@ -1,2 +1,2 @@
 exit(0) = break the function // cstdlib
-std::cin.ignore(32767, '\n'); // ignore 32767 symbols before \n (\n included)
+std::cin.ignore(32767, '\n'); // delete 32767 symbols before \n (\n included)
