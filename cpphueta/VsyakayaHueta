@@ -4,3 +4,9 @@ while(cin.get() != '\n');         // will read until the end of the current inpu
 cin.fail()                        // tells if last input was incorrect
 cin.clear()                       // resets state to "good"
 std::cout << static_cast<int>(c) << std::endl;      // transformation of variable type
+
+//  QT
+window.resize(250, 150);
+window.setWindowTitle("Icon");
+window.setWindowIcon(QIcon("web.png"));
+window.show();
