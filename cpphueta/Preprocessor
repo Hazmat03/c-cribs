@@ -1,0 +1,14 @@
+#include <iostream>
+
+void doSomething()
+{
+#define PRINT
+
+#ifdef PRINT            // TRUE
+    std::cout << "Printing!";
+#endif
+
+#ifndef PRINT           // FALSE
+    std::cout << "Not printing!";
+#endif
+}
