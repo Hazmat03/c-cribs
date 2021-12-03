@@ -1,14 +1,23 @@
-#include <iostream>
+                            // math.h
+#ifndef MATH_H              // defines if func was called - True
+#define MATH_H
 
-void doSomething()
+int getSquareSides()
 {
-#define PRINT
-
-#ifdef PRINT            // TRUE
-    std::cout << "Printing!";
+    return 4;
+}
 #endif
 
-#ifndef PRINT           // FALSE
-    std::cout << "Not printing!";
-#endif
+
+                            // geometry.h
+#include "math.h"           // defines if func was called: False - "math.h" won't be called
+
+
+                            // main.cpp
+#include "math.h"           // calls math.h
+#include "geometry.h"       // calls geometry.h
+
+int main()
+{
+    return 0;
 }
