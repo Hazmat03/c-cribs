@@ -4,7 +4,7 @@
 
 int getSquareSides()
 {
-    return 4;
+    return 0;
 }
 #endif
 
