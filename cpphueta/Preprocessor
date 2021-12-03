@@ -10,7 +10,7 @@ int getSquareSides()
 
 
                             // geometry.h
-#ifndef MATH_H			        // defines if dentificator wasn defined: If true - "math.h" won't be called
+#ifndef MATH_H			        // defines if identificator wasn't defined: If true - "math.h" won't be called
 #define MATH_H
 #include "math.h"
 #endif
