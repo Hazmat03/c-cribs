@@ -1,5 +1,5 @@
                             // math.h
-#ifndef MATH_H              // defines if func was called - True
+#ifndef MATH_H              // defines if file was called - True
 #define MATH_H
 
 int getSquareSides()
@@ -10,8 +10,9 @@ int getSquareSides()
 
 
                             // geometry.h
-#include "math.h"           // defines if func was called: False - "math.h" won't be called
-
+#ifdef GEOM_H               // defines if file was called: False - "math.h" won't be called
+#include "math.h"
+#endif
 
                             // main.cpp
 #include "math.h"           // calls math.h
