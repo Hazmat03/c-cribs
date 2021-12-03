@@ -1,6 +1,6 @@
                             // math.h
-#ifndef MATH_H              // defines if file was called - True
-#define MATH_H
+#ifndef MATH_H              // defines if identificator wasn't defined: if true - "math.h" will be called
+#define MATH_H              // marks MATH_H as defined, won't be called twice
 
 int getSquareSides()
 {
@@ -10,7 +10,7 @@ int getSquareSides()
 
 
                             // geometry.h
-#ifdef GEOM_H               // defines if file was called: False - "math.h" won't be called
+#ifdef GEOM_H               // defines if dentificator wasn defined: If true - "math.h" won't be called
 #include "math.h"
 #endif
 
