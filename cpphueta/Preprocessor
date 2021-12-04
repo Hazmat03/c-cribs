@@ -1,6 +1,6 @@
                             // math.h
 #ifndef MATH_H              // defines if identificator wasn't defined: if true - "math.h" will be called
-#define MATH_H              // marks MATH_H as defined, won't be called twice
+#define MATH_H              // creates symbol constant MATH_H, won't be called twice
 
 int getSquareSides()
 {
