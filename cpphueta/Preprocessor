@@ -36,6 +36,8 @@ int main()
 	cout << foo(PI, 4) << endl;
 #if PI == 3
 	cout << "True" << endl;
+#else 
+	cout << "False" << endl;
 #endif
 	return 0;
 }
