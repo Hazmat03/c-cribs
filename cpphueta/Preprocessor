@@ -27,12 +27,15 @@ int main()
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#define FOO(x, y) (x)*(y)       // Макрос-функция
-#define PI 3.14
+#define foo(x, y) (x)*(y)
+#define PI 3
 using namespace std;
 
 int main()
 {
-	cout << FOO(PI, 4);
+	cout << foo(PI, 4) << endl;
+#if PI == 3
+	cout << "True" << endl;
+#endif
 	return 0;
 }
