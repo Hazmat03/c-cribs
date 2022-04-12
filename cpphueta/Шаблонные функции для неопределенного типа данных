@@ -1,10 +1,23 @@
-template <typename T1, typename T2> 	// ШАБЛОННЫЕ ФУНКЦИИ, T1 - int, T2 - double
-void Sum(T1 a, T2 b) { 			// Т - неопределенный тип данных
-	cout << a << endl;
-	cout << b << endl;
+#include <iostream>
+using namespace std;
+
+template <typename T1, typename T2>
+void Print(T1 name, T2 name2) {
+	cout << "TT: " << name << "\t" << name2;
+	cout << endl;
+}
+
+void Print(int name, int name2) {
+	cout << "II: " << name << "\t" << name2;
+	cout << endl;
+}
+
+void Print(int name, string name2) {
+	cout << "IS: " << name << "\t" << name2;
+	cout << endl;
 }
 
 int main() {
-	Sum(12.4, "LOL");
-	return 0;
+	Print(1, 2);
+	Print(3, "word");
 }
