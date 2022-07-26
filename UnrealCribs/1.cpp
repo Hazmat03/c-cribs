@@ -1,9 +1,14 @@
 // Materials , change meshes material
+
+	UPROPERTY(EditAnywhere)
+	FLinearColor NewColour = FLinearColor::Black;
+
+
 #include "Materials/MaterialInstanceDynamic.h"
 
 UMaterialInstanceDynamic* DMat = mesh->CreateAndSetMaterialInstanceDynamic(0);
 	if (DMat) {
-		DMat->SetVectorParameterValue("Color", FLinearColor::Yellow);         // 1. Main Parameters name, 2. New Color
+		DMat->SetVectorParameterValue("Color", NewColour);
 	}
   
 
