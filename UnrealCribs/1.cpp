@@ -1,3 +1,6 @@
+// LOG
+UE_LOG(LogTemp, Warning, TEXT("Actors Name"));
+
 // Create Mesh
 UStaticMeshComponent* 		// Create StaticMesh
 UShapeComponent*		// Create Shape
