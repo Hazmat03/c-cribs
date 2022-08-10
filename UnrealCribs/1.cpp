@@ -14,10 +14,10 @@ FLinearColor NewColour = FLinearColor::Black;
 
 #include "Materials/MaterialInstanceDynamic.h"
 
-UMaterialInstanceDynamic* DMat = mesh->CreateAndSetMaterialInstanceDynamic(0);
-	if (DMat) {
-		DMat->SetVectorParameterValue("Color", NewColour);
-	}
+UMaterialInstanceDynamic* MyIns = MyMesh->CreateAndSetMaterialInstanceDynamic(0);	// Takes materials in mesh, if there's only one material - 0
+if (MyIns) {
+	MyIns->SetVectorParameterValue("MyColor", FLinearColor::Yellow);	// Sets values on Material
+}
 
 
 // Set 3D
