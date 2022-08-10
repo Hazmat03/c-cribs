@@ -15,7 +15,11 @@ UMaterialInstanceDynamic* DMat = mesh->CreateAndSetMaterialInstanceDynamic(0);
 	if (DMat) {
 		DMat->SetVectorParameterValue("Color", NewColour);
 	}
-  
+
+
+// Set 3D
+mesh->SetWorldScale3D(FVector(5.0f, 5.0f, 5.0f));
+
 
 // Create Static Mesh
 UPROPERTY(EditAnywhere)
