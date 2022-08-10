@@ -1,7 +1,12 @@
+// Create Mesh
+UStaticMeshComponent* 		// Create StaticMesh
+UShapeComponent*		// Create Shape
+
+
 // Materials , change meshes material
 
-	UPROPERTY(EditAnywhere)
-	FLinearColor NewColour = FLinearColor::Black;
+UPROPERTY(EditAnywhere)
+FLinearColor NewColour = FLinearColor::Black;
 
 
 #include "Materials/MaterialInstanceDynamic.h"
@@ -17,5 +22,8 @@ UPROPERTY(EditAnywhere)
 UStaticMeshComponent* mesh;
 
 mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Meshes Name"));
-SetRootComponent(mesh);
 
+
+// Root Component
+SetRootComponent(mesh);
+NewMesh->AttachTo(RootComponent);
