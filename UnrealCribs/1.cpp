@@ -16,7 +16,7 @@ FLinearColor NewColour = FLinearColor::Black;
 
 UMaterialInstanceDynamic* MyIns = MyMesh->CreateAndSetMaterialInstanceDynamic(0);	// Takes materials in mesh, if there's only one material - 0
 if (MyIns) {
-	MyIns->SetVectorParameterValue("MyColor", FLinearColor::Yellow);	// Sets values on Material
+	MyIns->SetVectorParameterValue("MyColor", FLinearColor::Yellow);	// Sets values on Material (Parameters name, Colour)
 }
 
 
