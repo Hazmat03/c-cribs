@@ -19,6 +19,14 @@ if (MyIns) {
 	MyIns->SetVectorParameterValue("MyColor", FLinearColor::Yellow);	// Sets values on Material (Parameters name, Colour)
 }
 
+// Change Material per second
+
+FTimerHandle TimerHandle;
+UPROPERTY(EditAnywhere)
+	float TimerRate = 3.0f;
+
+GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, TimerRate, true);		
+// TimerHandle, pointer on object to call func, function to change color, frequency variable, looped 
 
 // Set 3D
 mesh->SetWorldScale3D(FVector(5.0f, 5.0f, 5.0f));
