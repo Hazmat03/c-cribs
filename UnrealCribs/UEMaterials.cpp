@@ -20,12 +20,12 @@ void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 
 // Change Material per second
 
-FTimerHandle TimerHandle;
+FTimerHandle TimerHandle;		// Timer identificator
 
 UPROPERTY(EditAnywhere)
 	float TimerRate = 3.0f;
 
 GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, TimerRate, true);		
-// Timer reference, pointer on object to call func, function to change color, frequency variable, looped 
+// Timer identificator, pointer on object to call func, function to change color, frequency variable, looped 
 
 GetWorldTimerManager().ClearTimer(TimerHandle);		// Stop Timer
