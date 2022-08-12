@@ -26,4 +26,6 @@ UPROPERTY(EditAnywhere)
 	float TimerRate = 3.0f;
 
 GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, TimerRate, true);		
-// TimerHandle, pointer on object to call func, function to change color, frequency variable, looped 
+// Timer reference, pointer on object to call func, function to change color, frequency variable, looped 
+
+GetWorldTimerManager().ClearTimer(TimerHandle);		// Stop Timer
