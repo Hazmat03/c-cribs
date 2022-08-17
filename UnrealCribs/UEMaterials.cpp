@@ -19,6 +19,7 @@ void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 }
 
 // Change Material per second
+#include "TimerManager.h"
 
 FTimerHandle TimerHandle;		// Timer identificator
 
