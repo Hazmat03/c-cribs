@@ -1,5 +1,7 @@
 // LOG
 UE_LOG(LogTemp, Warning, TEXT("Actors Name"));
+// Show on screen
+GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlapped Actor"));
 
 // Create Mesh
 UStaticMeshComponent* 		// Create StaticMesh
