@@ -20,3 +20,7 @@ mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Meshes Name"));
 // Root Component
 SetRootComponent(mesh);
 NewMesh->AttachTo(RootComponent);
+
+// Set Transform
+const FTransform GeometryTransform = FTransform(FRotator::ZeroRotator, FVector(0.0f, 0.0f, 0.0f));
+    // ZeroRotator sets all values to 0.0f
