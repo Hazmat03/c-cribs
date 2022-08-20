@@ -21,6 +21,11 @@ mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Meshes Name"));
 SetRootComponent(mesh);
 NewMesh->AttachTo(RootComponent);
 
+// SpawnActor
+TSubclassOf<ABeginOverlapActor> GeoClass;       // Spawning Actor
+UWorld* WorldRef = GetWorld();
 // Set Transform
-const FTransform GeometryTransform = FTransform(FRotator::ZeroRotator, FVector(0.0f, 0.0f, 0.0f));
-    // ZeroRotator sets all values to 0.0f
+const FTransform GeometryTransform = FTransform(FRotator::ZeroRotator, FVector(0.0f, 0.0f, 0.0f));      // ZeroRotator sets all values to 0.0f
+
+ABeginOverlapActor* Spawner = WorldRef->SpawnActor<ABeginOverlapActor>(GeoClass, GTrans);
+// Obejct of Spawning Actor
