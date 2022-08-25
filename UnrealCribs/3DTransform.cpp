@@ -3,6 +3,28 @@ UE_LOG(LogTemp, Warning, TEXT("Actors Name"));
 // Show on screen
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlapped Actor"));
 
+
+// UENUM
+UENUM(BlueprintType)
+enum class EMoveType : uint8 {        // All enums must start by E, uint8 - type of enum means max elements of char - 255
+	Sin,
+	Static
+};
+
+switch (MovementType) {
+	case EMoveType::Sin: {
+		float time = GetWorld()->GetTimeSeconds();        // z = z0 + amp * sin(freq * t)
+		CurLoc = GetActorLocation();
+		CurLoc.X = InitLoc.X + Amp * FMath::Sin(Freq * time);
+		SetActorLocation(CurLoc);
+		}
+	case EMoveType::Static: {
+		break;
+	}
+	default:
+		break;
+	}
+
 // Create Mesh
 UStaticMeshComponent* 		// Create StaticMesh
 UShapeComponent*		// Create Shape
