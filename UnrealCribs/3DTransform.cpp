@@ -25,6 +25,23 @@ switch (MovementType) {
 		break;
 	}
 
+
+// USTRUCT
+USTRUCT(BlueprintType)
+struct FStruc {
+	GENERATED_USTRUCT_BODY()
+		UPROPERTY(EditAnywhere)
+			float Amp = 50.0f;
+		UPROPERTY(EditAnywhere)
+			float Freq = 3.0f;
+		UPROPERTY(EditAnywhere)
+			EMoveType MovementType = EMoveType::Static;
+};
+
+UPROPERTY(EditAnywhere)
+FStruc GeoData;
+
+
 // Create Mesh
 UStaticMeshComponent* 		// Create StaticMesh
 UShapeComponent*		// Create Shape
