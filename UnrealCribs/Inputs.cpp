@@ -21,17 +21,27 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FOnTimerFinished, AActor*);
 
 #include "Components/InputComponent.h"
 
-void AFrickinPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ASTUGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &AFrickinPawn::MoveForward);	
-	// (Mappings name, pointer to class, called function)
-	
-	PlayerInputComponent->BindAxis("MoveRight", this, &AFrickinPawn::MoveRight);
+    PlayerInputComponent->BindAxis("MoveForward", this, &ASTUGameCharacter::MoveForward);
+    PlayerInputComponent->BindAxis("MoveRight", this, &ASTUGameCharacter::MoveRight);
+
 }
 
-// Action Mapping
+void ASTUGameCharacter::MoveForward(float Amount)
+{
+    AddMovementInput(GetActorForwardVector(), Amount);
+}
+
+void ASTUGameCharacter::MoveRight(float Amount)
+{
+    AddMovementInput(GetActorRightVector(), Amount);
+}
+
+
+// ACTION MAPPINGS
 
 void AFuckinPC::SetupInputComponent() {
 	Super::SetupInputComponent();
