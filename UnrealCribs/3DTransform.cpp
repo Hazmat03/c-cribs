@@ -3,8 +3,9 @@ UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement", meta = (C
 	// Clamp need to restrict data value
 
 // Change Class (USTUCharacterMovementComponent)	
-	ASTUGameCharacter::ASTUGameCharacter(const FObjectInitializer &ObjInit)
+ASTUGameCharacter::ASTUGameCharacter(const FObjectInitializer &ObjInit)
     : Super(ObjInit.SetDefaultSubobjectClass<USTUCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
+	// Character Constructor() : Function<Class to change>(Get Components name)
 	
 // LOG
 UE_LOG(LogTemp, Warning, TEXT("Actors Name"));
