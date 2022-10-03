@@ -1,3 +1,7 @@
+// UPROPERTY
+UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement", meta = (ClampMin = "1.5", ClampMax = "10.0"))
+	// Clamp need to restrict data value
+
 // LOG
 UE_LOG(LogTemp, Warning, TEXT("Actors Name"));
 // Show on screen
